@@ -94,7 +94,7 @@ body {
     width: 80px;
     border: 3px solid black;
     position: absolute;
-    top:51px;
+    top:52px;
     background-color: #ffe600;
 }
 .upperLip.left {
@@ -117,7 +117,7 @@ body {
     position: absolute;
     left: 50%;
     margin-left: -150px;
-    height: 121px;
+    height: 120px;
     overflow: hidden;
     width: 300px;
     /* border: 1px solid red; */
@@ -131,5 +131,17 @@ body {
     border: 2px solid black;
     position: absolute;
     bottom: 0;
+    overflow: hidden;
+}
 
+.lowerLip::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    width: 100px;
+    height: 120px;
+    background-color: #ff485f;
+    left: 50%;
+    margin-left: -50px;
+    border-radius: 50px;
 }
