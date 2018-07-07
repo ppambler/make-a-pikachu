@@ -10,8 +10,23 @@
 *::before {
     box-sizing: border-box;
 }
-.preview {
+
+body {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+}
+.code-wrapper {
+    flex: 1;
+    height: 50%;
+}
+.preview-wrapper {
+    flex: 1;
+    height: 50%;
+}
+
+.preview {
+    height: 100%;
     border: 2px solid green;
     display: flex;
     justify-content: center;
