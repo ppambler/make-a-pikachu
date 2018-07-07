@@ -10,7 +10,7 @@
 *::before {
     box-sizing: border-box;
 }
-body {
+.preview {
     height: 100vh;
     border: 2px solid green;
     display: flex;
@@ -121,7 +121,7 @@ body {
     overflow: hidden;
     width: 300px;
     /* border: 1px solid red; */
-    z-index:-1;
+    /* z-index:-1; */
 }
 .lowerLip {
     height: 3513px;
