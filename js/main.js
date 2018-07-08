@@ -170,4 +170,13 @@ var code = `
 /* 好了，这只皮卡丘送给你 */
 `
 writeCode('',code)
+
+$('.actions').on('click','button',function(e){
+    // button，推荐不使用this
+    let $button = $(e.currentTarget)    
+    let speed = $button.attr('data-speed')
+    console.log(speed)
+    $button.addClass('active')
+        .siblings('.active').removeClass('active')
+})
 }.call()
