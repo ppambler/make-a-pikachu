@@ -1,23 +1,25 @@
 ! function () {
     var duration = 50
     // 用到了闭包哦，毕竟都是在一个函数内部
+    console.log(duration)
     function writeCode(prefix, code, fn) {
         let container = document.querySelector('#code')
         let styleTag = document.querySelector('#styleTag')
         let n = 0
         let id = setTimeout(function run() {
             n += 1
-            container.innerHTML = code.substring(0, n)
-            styleTag.innerHTML = code.substring(0, n)
+            var temp = prefix + code.substring(0,n)
+            container.innerHTML = Prism.highlight(prefix+code.substring(0, n), Prism.languages.css, 'css')
+            styleTag.innerHTML = temp
             container.scrollTop = container.scrollHeight
             if (n < code.length) {
-                setTimeout(run, duration)
+                 setTimeout(run, duration)
             } else {
                 fn && fn.call()
             }
         }, duration)
     }
-
+    
     $('.actions').on('click', 'button', function (e) {
         // button，推荐不使用this
         let $button = $(e.currentTarget)
@@ -31,10 +33,10 @@
                 break;
             case 'normal':
                 duration = 50
-                break
+                break;
             case 'fast':
                 duration = 10
-                break
+                break;
         }
     })
     var code = `
@@ -192,7 +194,7 @@
 
 /* 好了，这只皮卡丘送给你 */
 `
-    writeCode('', code)
-
+   
+writeCode('', code)
 
 }.call()
