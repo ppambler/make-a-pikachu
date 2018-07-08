@@ -1,12 +1,15 @@
 /* 初始化 */
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 *::after {
     box-sizing: border-box;
 }
+
 *::before {
     box-sizing: border-box;
 }
@@ -16,20 +19,22 @@ body {
     flex-direction: column;
     height: 100vh;
 }
+
 .code-wrapper {
     flex: 1;
     height: 50%;
     padding: 12px;
 }
+
 .preview-wrapper {
     flex: 1;
     height: 50%;
 }
+
 #code {
     overflow: hidden;
     height: 100%;
 }
-
 
 .actions {
     position: absolute;
@@ -38,17 +43,22 @@ body {
     display: flex;
     flex-direction: column;
 }
-.actions > button {
+
+.actions>button {
     margin: 10px;
     background-color: #ddd;
     padding: 8px 10px;
     border: none;
 }
+
 /* 这个是点击的效果了 */
+
 .actions>button.active {
-    box-shadow:1px 1px 1px rgba(0,0,0,0.8)
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8)
 }
+
 /* 去掉按钮聚焦后默认样式 */
+
 .actions>button:focus {
     outline: none;
 }
